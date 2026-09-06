@@ -1,10 +1,11 @@
 import './App.css'
 import { Suspense } from 'react';
 // import Users from './Users'
-import Posts from './Posts';
+// import Posts from './Posts';
 // import Batter from './Batter';
 // import Counter from './Counter';
 // import Cart from './Cart'
+import Todos from './Todos';
 
 
 // const usersDataPromise = async () => {
@@ -31,15 +32,17 @@ function App() {
 
   return (
     <>
-      
 
+      <Todos></Todos>
+
+      {/* <Suspense fallback = {<p>Loading posts data...</p>}>
+        <Posts postDataPromise = {postDataPromise()}></Posts>
+      </Suspense> */}
+      
         {/* <Suspense fallback={<p>Loading...</p>}>
           <Users usersDataPromise={usersDataPromise()}></Users>
         </Suspense> */}
 
-        <Suspense fallback = {<p>Loading posts data...</p>}>
-          <Posts postDataPromise = {postDataPromise()}></Posts>
-        </Suspense>
 
         {/* <Counter></Counter>
       <Batter></Batter> */}
